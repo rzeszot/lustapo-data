@@ -5,6 +5,9 @@ on:
     branches:
       - 'umcs/*'
 
+env:
+  SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+
 jobs:
   umcs:
     runs-on: ubuntu-latest
@@ -20,6 +23,7 @@ jobs:
           clean: false
 
       - name: Merge
+        id: merge
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/rzeszot/lustapo-data.git"
@@ -30,3 +34,13 @@ jobs:
           git merge "${GITHUB_SHA}" --allow-unrelated-histories
 
           git push "${REMOTE}" HEAD:master
+
+      - name: Slack
+        if: always()
+        run: |
+          curl \
+            -X POST \
+            -H 'Content-type: application/json; charset=utf-8' \
+            -H "Authorization: Bearer $SLACK_TOKEN" \
+            --data '{"text": "${{ github.event_name }} ${{ steps.merge.outcome }}", "channel": "lustapo"}' \
+            https://slack.com/api/chat.postMessage
