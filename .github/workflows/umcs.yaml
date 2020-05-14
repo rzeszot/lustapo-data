@@ -23,7 +23,6 @@ jobs:
           clean: false
 
       - name: Merge
-        id: merge
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/rzeszot/lustapo-data.git"
@@ -42,5 +41,5 @@ jobs:
             -X POST \
             -H 'Content-type: application/json; charset=utf-8' \
             -H "Authorization: Bearer $SLACK_TOKEN" \
-            --data '{"text": "${{ github.event_name }} ${{ steps.merge.outcome }}", "channel": "lustapo"}' \
+            --data '{"text": "${GITHUB_REF##refs/heads/} ${{ job.status }}", "channel": "lustapo"}' \
             https://slack.com/api/chat.postMessage
