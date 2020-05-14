@@ -1,0 +1,23 @@
+name: Merge
+
+on:
+  push:
+    branches:
+      - 'umcs/*'
+
+jobs:
+  umcs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Merge
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        run: |
+          git checkout master
+          git merge $GITHUB_REF
+          git push "${REMOTE}" HEAD:master
