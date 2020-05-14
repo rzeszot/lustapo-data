@@ -10,14 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout ref
         uses: actions/checkout@v2
+
+      - name: Checkout master
+        uses: actions/checkout@v2
+        with:
+          ref: master
+          clean: false
 
       - name: Merge
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         run: |
-          git checkout master
-          git merge $GITHUB_REF
+          git merge "origin/${GITHUB_REF#refs/heads/}"
           git push "${REMOTE}" HEAD:master
