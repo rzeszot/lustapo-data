@@ -22,7 +22,7 @@ jobs:
       - name: Merge
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/rzeszot/lustapo-data.git"
         run: |
           git config user.name 'Igor'
           git config user.email 'igor.bot@users.noreply.github.com'
