@@ -1,16 +1,16 @@
 {
-  "station" : "22",
   "data" : {
-    "rain" : 2.1,
-    "wind" : {
-      "speed" : 2.3,
-      "direction" : 306
-    },
-    "temperature" : {
-      "ground" : 2.6,
-      "air" : 1.9
-    },
+    "date" : "2020-05-12T05:20:00.000Z",
     "humidity" : 93.8,
-    "date" : "2020-05-12T05:20:00.000Z"
-  }
+    "rain" : 2.1,
+    "temperature" : {
+      "air" : 1.9,
+      "ground" : 2.6
+    },
+    "wind" : {
+      "direction" : 306,
+      "speed" : 2.3
+    }
+  },
+  "station" : "22"
 }
