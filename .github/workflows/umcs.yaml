@@ -24,5 +24,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         run: |
-          git merge "${GITHUB_SHA}"
+          git config user.name 'Igor'
+          git config user.email 'igor.bot@users.noreply.github.com'
+
+          git merge "${GITHUB_SHA}" --allow-unrelated-histories
+
           git push "${REMOTE}" HEAD:master
