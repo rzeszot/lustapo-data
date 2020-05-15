@@ -35,6 +35,7 @@ jobs:
 
       - name: Checkout master
         run: |
+          git fetch origin master --depth 1
           git checkout --track origin/master
 
       - name: Merge
