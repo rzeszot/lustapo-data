@@ -17,7 +17,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate
-        run: sh .github/scripts/generate.sh
+        run:
+          echo ::set-env name=reference::${GITHUB_REF##refs/heads/}
+          sh .github/scripts/generate.sh
 
       - name: Commit
         run: |
@@ -39,10 +41,7 @@ jobs:
           REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/rzeszot/lustapo-data.git"
         run: |
           git merge "${GITHUB_SHA}" --allow-unrelated-histories
-
           git push "${REMOTE}" HEAD:master
-
-          echo ::set-env name=reference::${GITHUB_REF##refs/heads/}
 
       - name: Slack
         if: always()
