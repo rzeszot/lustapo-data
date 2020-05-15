@@ -47,7 +47,7 @@ jobs:
           git push "${REMOTE}" HEAD:master
 
       - name: Slack
-        if: always()
+        if: ${{ !success() }}
         run: |
           curl \
             -X POST \
