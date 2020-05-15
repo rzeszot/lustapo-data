@@ -18,7 +18,8 @@ jobs:
 
       - name: Generate
         run:
-          echo ::set-env name=reference::${GITHUB_REF##refs/heads/}
+          echo "::set-env name=reference::${GITHUB_REF##refs/heads/}"
+
           sh .github/scripts/generate.sh
 
       - name: Commit
@@ -27,7 +28,9 @@ jobs:
           git config user.email 'igor.bot@users.noreply.github.com'
 
           git add -A
-          git commit -m "regenerate"
+          git commit -m "regenerate" || echo "nothing to commit"
+
+          find .
 
       - name: Checkout master
         uses: actions/checkout@v2
