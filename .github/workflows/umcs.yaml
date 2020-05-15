@@ -34,10 +34,10 @@ jobs:
 
           git push "${REMOTE}" HEAD:master
 
+          echo ::set-env name=reference::${GITHUB_REF##refs/heads/}
+
       - name: Slack
         if: always()
-        env:
-          reference: ${GITHUB_REF##refs/heads/}
         run: |
           curl \
             -X POST \
