@@ -31,6 +31,7 @@ jobs:
           git commit -m "regenerate" || echo "nothing to commit"
 
           echo "::set-env name=current_branch::`git rev-parse --abbrev-ref HEAD`"
+          git checkout "${{ env.reference }}"
 
       - name: Checkout master
         uses: actions/checkout@v2
