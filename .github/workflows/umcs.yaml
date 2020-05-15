@@ -35,6 +35,9 @@ jobs:
 
           git merge "${GITHUB_SHA}" --allow-unrelated-histories
 
+          git add -A
+          git commit -m "regenerate"
+
           git push "${REMOTE}" HEAD:master
 
           echo ::set-env name=reference::${GITHUB_REF##refs/heads/}
