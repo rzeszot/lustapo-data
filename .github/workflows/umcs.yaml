@@ -34,17 +34,14 @@ jobs:
           git checkout "${{ env.reference }}"
 
       - name: Checkout master
-        uses: actions/checkout@v2
-        with:
-          ref: master
-          clean: false
+        run: |
+          git checkout --track origin/master
 
       - name: Merge
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/rzeszot/lustapo-data.git"
         run: |
-          git checkout master
           git merge "${{ env.reference }}" --allow-unrelated-histories
           git push "${REMOTE}" HEAD:master
 
