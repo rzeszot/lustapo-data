@@ -14,5 +14,4 @@ generate:
         uses: actions/checkout@v2
 
       - name: Generate
-        run: |
-          echo "TODO"
+        run: sh .github/scripts/generate.sh
