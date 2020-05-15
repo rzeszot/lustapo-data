@@ -30,7 +30,7 @@ jobs:
           git add -A
           git commit -m "regenerate" || echo "nothing to commit"
 
-          find .
+          echo "::set-env name=current_branch::`git rev-parse --abbrev-ref HEAD`"
 
       - name: Checkout master
         uses: actions/checkout@v2
@@ -43,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/rzeszot/lustapo-data.git"
         run: |
-          git merge "${GITHUB_SHA}" --allow-unrelated-histories
+          git merge "${{ env.reference }}" --allow-unrelated-histories
           git push "${REMOTE}" HEAD:master
 
       - name: Slack
