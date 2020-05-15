@@ -5,8 +5,8 @@ on:
     branches:
       - master
 
-generate:
-  umcs:
+jobs:
+  generate:
     runs-on: ubuntu-latest
 
     steps:
