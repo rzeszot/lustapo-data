@@ -43,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/rzeszot/lustapo-data.git"
         run: |
-          git merge "${{ env.reference }}" --no-ff
+          git merge "${{ env.reference }}" --no-ff --allow-unrelated-histories
           git push "${REMOTE}" HEAD:master
 
       - name: Slack
