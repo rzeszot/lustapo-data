@@ -35,7 +35,7 @@ jobs:
 
       - name: Checkout master
         run: |
-          git fetch origin master --depth 1
+          git fetch origin master
           git checkout --track origin/master
 
       - name: Merge
@@ -43,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REMOTE: "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/rzeszot/lustapo-data.git"
         run: |
-          git merge "${{ env.reference }}" --allow-unrelated-histories
+          git merge "${{ env.reference }}" --no-ff
           git push "${REMOTE}" HEAD:master
 
       - name: Slack
