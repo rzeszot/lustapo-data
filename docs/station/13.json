@@ -1,14 +1,14 @@
 {
   "data" : {
-    "date" : "2020-05-19T20:10:00.000Z",
+    "date" : "2020-05-19T20:20:00.000Z",
     "rain" : 1.5,
     "temperature" : {
-      "air" : 11.2,
-      "ground" : 11.3
+      "air" : 10.9,
+      "ground" : 11
     },
     "wind" : {
-      "direction" : 275,
-      "speed" : 4
+      "direction" : 282,
+      "speed" : 3.4
     }
   },
   "station" : "13"
