@@ -1,15 +1,15 @@
 {
   "data" : {
-    "date" : "2020-05-25T06:10:00.000Z",
-    "humidity" : 99.8,
+    "date" : "2020-05-25T06:20:00.000Z",
+    "humidity" : 99.7,
     "rain" : 0.1,
     "temperature" : {
-      "air" : 9.6,
-      "ground" : 11.6
+      "air" : 9.9,
+      "ground" : 12
     },
     "wind" : {
-      "direction" : 266,
-      "speed" : 1.6
+      "direction" : 265,
+      "speed" : 2
     }
   },
   "station" : "23"
