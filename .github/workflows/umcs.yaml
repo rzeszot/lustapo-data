@@ -55,3 +55,7 @@ jobs:
             -H "Authorization: Bearer $SLACK_TOKEN" \
             --data '{"text": "${{ env.reference }} ${{ job.status }}", "channel": "lustapo"}' \
             https://slack.com/api/chat.postMessage
+
+      - name: Cleaning
+        run: |
+          git push origin --delete "${{ env.reference }}" 
