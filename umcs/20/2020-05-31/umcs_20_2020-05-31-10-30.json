@@ -1,0 +1,16 @@
+{
+  "data" : {
+    "date" : "2020-05-31T10:30:00.000Z",
+    "humidity" : 99.9,
+    "rain" : 7.9,
+    "temperature" : {
+      "air" : 13.4,
+      "ground" : 14
+    },
+    "wind" : {
+      "direction" : 4,
+      "speed" : 3.1
+    }
+  },
+  "station" : "20"
+}
