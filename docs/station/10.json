@@ -1,11 +1,12 @@
 {
   "data" : {
-    "date" : "2020-06-26T11:40:00.000Z",
-    "humidity" : 46.1,
+    "date" : "2020-06-26T11:50:00.000Z",
+    "humidity" : 44.6,
+    "pressure" : 995.8,
     "rain" : 0,
     "temperature" : {
-      "air" : 26.6,
-      "sense" : 26.6
+      "air" : 25.8,
+      "sense" : 25.8
     },
     "wind" : {
       "speed" : 0
