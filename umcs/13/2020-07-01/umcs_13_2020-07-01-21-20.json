@@ -1,0 +1,15 @@
+{
+  "data" : {
+    "date" : "2020-07-01T21:20:00.000Z",
+    "rain" : 0.1,
+    "temperature" : {
+      "air" : 19.4,
+      "ground" : 18.4
+    },
+    "wind" : {
+      "direction" : 133,
+      "speed" : 0.5
+    }
+  },
+  "station" : "13"
+}
