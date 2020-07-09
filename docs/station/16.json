@@ -1,16 +1,16 @@
 {
   "data" : {
-    "date" : "2020-07-09T23:40:00.000Z",
-    "humidity" : 77.4,
-    "pressure" : 991.4,
+    "date" : "2020-07-09T23:50:00.000Z",
+    "humidity" : 78,
+    "pressure" : 991.3,
     "rain" : 0,
     "temperature" : {
       "air" : 17,
-      "sense" : 18.433536280041
+      "sense" : 17
     },
     "wind" : {
-      "direction" : 132,
-      "speed" : 2.2
+      "direction" : 138,
+      "speed" : 1.8
     }
   },
   "station" : "16"
