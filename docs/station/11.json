@@ -1,16 +1,15 @@
 {
   "data" : {
-    "date" : "2020-07-11T22:00:00.000Z",
-    "humidity" : 107.5,
-    "pressure" : 855.2,
-    "rain" : 5.8,
+    "date" : "2020-07-11T22:10:00.000Z",
+    "humidity" : 107.2,
+    "rain" : 6.6,
     "temperature" : {
-      "air" : 10.7,
-      "sense" : 10.7
+      "air" : 10.6,
+      "sense" : 10.6
     },
     "wind" : {
-      "direction" : 15,
-      "speed" : 1
+      "direction" : 25,
+      "speed" : 0.9
     }
   },
   "station" : "11"
