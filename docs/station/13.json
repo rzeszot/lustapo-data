@@ -1,14 +1,13 @@
 {
   "data" : {
-    "date" : "2020-07-16T16:20:00.000Z",
-    "rain" : 13.6,
+    "date" : "2020-07-16T16:30:00.000Z",
+    "rain" : 13.8,
     "temperature" : {
       "air" : 14.4,
-      "ground" : 15.1
+      "ground" : 15.3
     },
     "wind" : {
-      "direction" : 256,
-      "speed" : 0.8
+      "speed" : 0.2
     }
   },
   "station" : "13"
