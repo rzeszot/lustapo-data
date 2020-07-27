@@ -1,0 +1,15 @@
+{
+  "data" : {
+    "date" : "2020-07-27T21:40:00.000Z",
+    "humidity" : 99.7,
+    "rain" : 1.8,
+    "temperature" : {
+      "air" : 14.5,
+      "ground" : 10.6
+    },
+    "wind" : {
+      "speed" : 0.3
+    }
+  },
+  "station" : "20"
+}
