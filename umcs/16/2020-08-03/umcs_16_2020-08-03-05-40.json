@@ -1,0 +1,17 @@
+{
+  "data" : {
+    "date" : "2020-08-03T05:40:00.000Z",
+    "humidity" : 62.9,
+    "pressure" : 987.7,
+    "rain" : 0,
+    "temperature" : {
+      "air" : 18.8,
+      "sense" : 20.429127024737
+    },
+    "wind" : {
+      "direction" : 133,
+      "speed" : 2
+    }
+  },
+  "station" : "16"
+}
